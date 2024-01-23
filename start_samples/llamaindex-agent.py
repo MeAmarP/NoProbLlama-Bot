@@ -32,7 +32,7 @@ tools = [multiply_tool, add_tool]
 # llm = Ollama(model="llama2", temperature=0.0)
 
 api_key = "Me9cDAgQ1C6ZuQJ6Z5LWMyz8z1SPBC9NDCKeAsZO"
-llm2 = Cohere(api_key=api_key, temperature=0.0, max_tokens=256)
+llm2 = Cohere(api_key=api_key, temperature=0.0)
 
 agent = ReActAgent.from_tools(tools=tools, llm=llm2, verbose=True)
 response = agent.chat("Use the provided tools to solve the problem. Problem: What is 10*2? Calculate step by step")
