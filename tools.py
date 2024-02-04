@@ -32,7 +32,7 @@ class GoogleSearchTool(BaseTool):
 
     def google_search(self, search_term, **kwargs):
         service = build("customsearch", "v1", developerKey=ggl_api_key)
-        res = service.cse().list(q=search_term, cx=ggl_cse_id, **kwargs).execute()
+        res = service.cse().list(q=search_term, cx=ggl_cse_id, gl='in', **kwargs).execute()
         return res['items']
      
     def _run(self, search_query):
