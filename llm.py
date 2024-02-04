@@ -32,7 +32,7 @@ class LLMProvider:
                 repo_id="HuggingFaceH4/zephyr-7b-beta",
                 task="text-generation",
                 model_kwargs={
-                    "temperature": 0.1,
+                    "temperature": self.temperature,
                     "repetition_penalty": 1.03,
                 },
             )
