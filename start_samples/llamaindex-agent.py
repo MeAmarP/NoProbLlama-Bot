@@ -31,7 +31,7 @@ tools = [multiply_tool, add_tool]
 
 # llm = Ollama(model="llama2", temperature=0.0)
 
-api_key = "Me9cDAgQ1C6ZuQJ6Z5LWMyz8z1SPBC9NDCKeAsZO"
+# TODO --> get api key from .env
 llm2 = Cohere(api_key=api_key, temperature=0.0)
 
 agent = ReActAgent.from_tools(tools=tools, llm=llm2, verbose=True)
